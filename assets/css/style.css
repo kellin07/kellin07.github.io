@@ -116,6 +116,7 @@ a{color:inherit;text-decoration:none}
 .meta-list{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:18px 40px;margin:26px 0}
 .meta-list li{border-left:3px solid var(--accent);padding-left:16px}
 .meta-list .k{font-size:12px;letter-spacing:.2em;color:var(--muted)}
+#experience .meta-list .k{font-size:14px;font-weight:700;letter-spacing:.04em;color:var(--ink)}
 .meta-list .v{font-size:17px;font-weight:600;margin-top:3px}
 .tags{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
 .tags span{white-space:nowrap}
@@ -150,7 +151,7 @@ td:nth-child(n+3){text-align:right;font-variant-numeric:tabular-nums}
 .gallery figcaption{padding:11px 14px;font-size:13px;color:var(--ink-soft);letter-spacing:.04em}
 .gallery-block{margin:40px 0}
 .gallery-block .gb-title{font-family:var(--serif);font-size:20px;font-weight:700;margin-bottom:4px}
-.gallery-block .gb-meta{font-size:14px;font-weight:600;color:var(--ink-soft);margin:2px 0 6px}
+.gallery-block .gb-meta{font-size:15px;font-weight:700;color:var(--ink);margin:2px 0 14px;letter-spacing:.02em}
 .gallery-block .gb-note{font-size:13px;color:var(--muted);margin-bottom:14px}
 
 /* sub-project list — text-cover cards (no image thumbnail) */
