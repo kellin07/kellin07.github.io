@@ -166,6 +166,8 @@ td:nth-child(n+3){text-align:right;font-variant-numeric:tabular-nums}
 .case-card:nth-child(1){--tint:#f1dcc6}
 .case-card:nth-child(2){--tint:#dde8cd}
 .case-card:nth-child(3){--tint:#d0e1ef}
+.case-card:nth-child(4){--tint:#f0dbdd}
+.case-card:nth-child(5){--tint:#e3dcee}
 .case-card .cc-body{position:relative;z-index:2;padding:28px 32px;max-width:54%}
 .case-card .cc-num{font-family:var(--serif);font-size:14px;letter-spacing:.22em;color:var(--accent)}
 .case-card h4{font-family:var(--serif);font-size:24px;font-weight:700;line-height:1.4;margin:8px 0 10px;color:var(--ink)}
