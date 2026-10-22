@@ -81,15 +81,27 @@
   function open(slide){
     var d=DATA[slide]; if(!d) return;
     var pts=(d.points||[]).map(function(p){return '<li>'+(p.k?'<b>'+esc(p.k)+'</b>':'')+esc(p.v)+'</li>';}).join('');
-    var imgs=(d.images||[]).map(function(src){return '<img src="'+src+'" alt="">';}).join('');
+    var list=(d.images||[]);
+    var imgs=list.map(function(src){return '<img src="'+src+'" alt="">';}).join('');
     overlay.innerHTML='<div class="wd-modal" role="dialog" aria-modal="true" aria-label="'+esc(d.title)+'">'+
       '<div class="wd-head"><h3>'+esc(d.title)+'</h3><button class="wd-close" aria-label="关闭">×</button></div>'+
       '<div class="wd-body"><p class="wd-desc">'+esc(d.desc)+'</p>'+
       (pts?'<ul class="wd-points">'+pts+'</ul>':'')+
-      (imgs?'<div class="wd-imgs">'+imgs+'</div>':'')+'</div></div>';
+      (imgs?'<div class="wd-imgs n-'+list.length+'">'+imgs+'</div>':'')+'</div></div>';
     overlay.classList.add('open');
     document.body.style.overflow='hidden';
     var b=overlay.querySelector('.wd-close'); if(b) b.addEventListener('click',close);
+    var lb=document.querySelector('.lb-overlay');
+    overlay.querySelectorAll('.wd-imgs img').forEach(function(im){
+      im.addEventListener('click',function(e){
+        e.stopPropagation();
+        if(lb){var li=lb.querySelector('img'); if(li){li.src=im.getAttribute('src'); lb.classList.add('open');}}
+      });
+    });
+    if(lb && !lb.getAttribute('data-wdbound')){
+      lb.setAttribute('data-wdbound','1');
+      lb.addEventListener('click',function(){setTimeout(function(){if(overlay.classList.contains('open')) document.body.style.overflow='hidden';},0);});
+    }
   }
   function close(){overlay.classList.remove('open');overlay.innerHTML='';document.body.style.overflow='';}
   overlay.addEventListener('click',function(e){if(e.target===overlay) close();});
