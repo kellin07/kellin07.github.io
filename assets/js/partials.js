@@ -49,3 +49,27 @@
     if(h === here) a.classList.add('active');
   });
 })();
+
+// Lightbox: click a work image (gallery / subcard / about) to view it full size.
+// Long images scroll vertically inside the overlay.
+(function(){
+  var overlay = document.createElement('div');
+  overlay.className = 'lb-overlay';
+  overlay.setAttribute('role','dialog');
+  overlay.innerHTML = '<button class="lb-close" aria-label="关闭">×</button>';
+  var lbImg = document.createElement('img');
+  overlay.appendChild(lbImg);
+  document.body.appendChild(overlay);
+
+  function open(src){ lbImg.src = src; overlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function close(){ overlay.classList.remove('open'); lbImg.removeAttribute('src'); document.body.style.overflow = ''; }
+
+  overlay.addEventListener('click', function(e){ if(e.target !== lbImg) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') close(); });
+
+  document.querySelectorAll('.gallery img, .subcard .thumb img, .about-grid img').forEach(function(im){
+    if(!im.getAttribute('src')) return;
+    im.style.cursor = 'zoom-in';
+    im.addEventListener('click', function(e){ e.preventDefault(); open(im.getAttribute('src')); });
+  });
+})();
