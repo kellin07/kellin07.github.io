@@ -59,19 +59,19 @@
       images:[P+"slide19_img30.jpg",P+"slide19_img31.jpg",P+"slide19_img32.jpg",P+"slide19_img33.jpg"]},
     "20":{title:"大沥大金地百货城改造可行性报告",
       desc:"参与方案撰写，负责项目发展条件分析、市场分析，完善内容排版，优化内容表达与视觉呈现。",
-      points:[{k:"P1",v:"封面"},{k:"P2",v:"项目需求"},{k:"P3",v:"区位规划"},{k:"P4",v:"成本测算"}],
+      points:[{k:"",v:"封面"},{k:"",v:"项目需求"},{k:"",v:"区位规划"},{k:"",v:"成本测算"}],
       images:[P+"slide20_img34.jpg",P+"slide20_img35.jpg",P+"slide20_img36.jpg",P+"slide20_img37.jpg"]},
     "22":{title:"佛山新城区域市场研究",
       desc:"独立撰写输出专项市场研究报告。涵盖区位配套、经济运行、发展规划、楼市态势、客群需求等核心维度，为片区市场分析与决策提供支撑。",
-      points:[{k:"P1",v:"目录"},{k:"P2",v:"楼市概况"},{k:"P3",v:"在售楼盘"},{k:"P4",v:"研究结论"}],
+      points:[{k:"",v:"目录"},{k:"",v:"楼市概况"},{k:"",v:"在售楼盘"},{k:"",v:"研究结论"}],
       images:[P+"slide22_img42.jpg",P+"slide22_img43.jpg",P+"slide22_img44.jpg",P+"slide22_img45.jpg"]},
     "23":{title:"优衣库 Mickey Stands 整合营销策划案",
       desc:"大广赛参赛作品。参与方案撰写，分工负责文案内容完善与 PPT 排版，优化内容表达与视觉呈现。",
-      points:[{k:"P1",v:"封面"},{k:"P2",v:"内容提要"},{k:"P3",v:"消费者分析"},{k:"P4",v:"活动落地"}],
+      points:[{k:"",v:"封面"},{k:"",v:"内容提要"},{k:"",v:"消费者分析"},{k:"",v:"活动落地"}],
       images:[P+"slide23_img46.jpg",P+"slide23_img47.jpg",P+"slide23_img48.jpg",P+"slide23_img49.jpg"]},
     "24":{title:"自然堂二十周年营销策划案",
       desc:"以「美，不被定义」为主题，围绕自然堂二十周年策划线上线下一体化整合营销方案。参与方案撰写，分工负责文案内容完善与 PPT 排版，优化内容表达与视觉呈现。",
-      points:[{k:"P1",v:"主题封面"},{k:"P2",v:"组织战略"},{k:"P3",v:"项目需求"},{k:"P4",v:"项目策略"},{k:"奖项",v:"中国大学生公共关系策划创业大赛 三等奖"}],
+      points:[{k:"",v:"主题封面"},{k:"",v:"组织战略"},{k:"",v:"项目需求"},{k:"",v:"项目策略"},{k:"奖项",v:"中国大学生公共关系策划创业大赛 三等奖"}],
       images:[P+"slide24_img50.jpg",P+"slide24_img51.jpg",P+"slide24_img52.jpg",P+"slide24_img53.jpg"]}
   };
   var overlay=document.createElement('div');
@@ -80,7 +80,7 @@
   function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
   function open(slide){
     var d=DATA[slide]; if(!d) return;
-    var pts=(d.points||[]).map(function(p){return '<li><b>'+esc(p.k)+'</b>'+esc(p.v)+'</li>';}).join('');
+    var pts=(d.points||[]).map(function(p){return '<li>'+(p.k?'<b>'+esc(p.k)+'</b>':'')+esc(p.v)+'</li>';}).join('');
     var imgs=(d.images||[]).map(function(src){return '<img src="'+src+'" alt="">';}).join('');
     overlay.innerHTML='<div class="wd-modal" role="dialog" aria-modal="true" aria-label="'+esc(d.title)+'">'+
       '<div class="wd-head"><h3>'+esc(d.title)+'</h3><button class="wd-close" aria-label="关闭">×</button></div>'+
