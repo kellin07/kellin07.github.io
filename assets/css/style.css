@@ -135,6 +135,7 @@ td:nth-child(n+3){text-align:right;font-variant-numeric:tabular-nums}
   align-items:start;
 }
 .gallery.two{grid-template-columns:repeat(2,1fr)}
+.gallery.three{grid-template-columns:repeat(3,1fr)}
 .gallery figure{margin:0;background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:.3s;display:flex;flex-direction:column}
 .gallery figure:hover{transform:translateY(-3px);box-shadow:0 14px 30px -20px rgba(26,23,20,.4)}
 .gallery img{width:100%;height:auto;display:block;cursor:zoom-in}
@@ -191,6 +192,7 @@ td:nth-child(n+3){text-align:right;font-variant-numeric:tabular-nums}
   /* GALLERY: keep 2 columns on mobile — never collapse to single */
   .gallery{grid-template-columns:repeat(2,1fr);gap:10px}
   .gallery.two{grid-template-columns:repeat(2,1fr)}
+  .gallery.three{grid-template-columns:repeat(2,1fr)}
   .meta-list{grid-template-columns:1fr}
   .about-grid{grid-template-columns:1fr;gap:24px}
 }
