@@ -20,19 +20,86 @@
 <section class="section">
   <div class="wrap">
     <div class="sublist">
-      <div class="subcard"><div class="body"><h4>IP 账号策划（老板口播 IP）</h4><p>两阶段运营路径、三件事验证标准、一句话 IP 定位。</p></div></div>
-      <div class="subcard"><div class="body"><h4>产品科普系列短视频脚本</h4><p>情景剧口播脚本，把硬核技术通俗化表达。</p></div></div>
-      <div class="subcard"><div class="body"><h4>农业示范园 / 农业养殖项目方案</h4><p>现代农业园区策划与养殖项目提案文案。</p></div></div>
-      <div class="subcard"><div class="body"><h4>朝安金茂悦人才房竞标方案</h4><p>负责市场研判与本体分析、PPT 排版。</p></div></div>
-      <div class="subcard"><div class="body"><h4>大沥大金地百货城改造可行性报告</h4><p>发展条件与 market 分析、内容排版。</p></div></div>
-      <div class="subcard"><div class="body"><h4>佛山新城区域市场研究</h4><p>独立撰写专项市场研究报告。</p></div></div>
-      <div class="subcard"><div class="body"><h4>优衣库 Mickey Stands 整合营销策划案</h4><p>大广赛参赛作品，负责文案与排版。</p></div></div>
-      <div class="subcard"><div class="body"><h4>自然堂二十周年营销策划案</h4><p>「美，不被定义」整合营销，获公关策划大赛三等奖。</p></div></div>
+      <div class="subcard" data-slide="15"><div class="body"><h4>IP 账号策划（老板口播 IP）</h4><p>两阶段运营路径、三件事验证标准、一句话 IP 定位。</p><span class="go">查看详情 →</span></div></div>
+      <div class="subcard" data-slide="16"><div class="body"><h4>产品科普系列短视频脚本</h4><p>情景剧口播脚本，把硬核技术通俗化表达。</p><span class="go">查看详情 →</span></div></div>
+      <div class="subcard" data-slide="17"><div class="body"><h4>农业示范园 / 农业养殖项目方案</h4><p>现代农业园区策划与养殖项目提案文案。</p><span class="go">查看详情 →</span></div></div>
+      <div class="subcard" data-slide="19"><div class="body"><h4>朝安金茂悦人才房竞标方案</h4><p>负责市场研判与本体分析、PPT 排版。</p><span class="go">查看详情 →</span></div></div>
+      <div class="subcard" data-slide="20"><div class="body"><h4>大沥大金地百货城改造可行性报告</h4><p>发展条件与 market 分析、内容排版。</p><span class="go">查看详情 →</span></div></div>
+      <div class="subcard" data-slide="22"><div class="body"><h4>佛山新城区域市场研究</h4><p>独立撰写专项市场研究报告。</p><span class="go">查看详情 →</span></div></div>
+      <div class="subcard" data-slide="23"><div class="body"><h4>优衣库 Mickey Stands 整合营销策划案</h4><p>大广赛参赛作品，负责文案与排版。</p><span class="go">查看详情 →</span></div></div>
+      <div class="subcard" data-slide="24"><div class="body"><h4>自然堂二十周年营销策划案</h4><p>「美，不被定义」整合营销，获公关策划大赛三等奖。</p><span class="go">查看详情 →</span></div></div>
     </div>
   </div>
 </section>
 
 <div id="foot-root"></div>
 <script src="assets/js/partials.js"></script>
+<script>
+/* 内容策划 8 项：点击卡片弹出该项目详情（内容取自 PPT 对应页文字与该页图片） */
+(function(){
+  var P='assets/img/';
+  var DATA={
+    "15":{title:"IP 账号策划（老板口播 IP）",
+      desc:"老板真人出镜口播 IP 的两阶段运营路径与定位方案。",
+      points:[{k:"01 两阶段运营路径",v:"先小范围验证人设可行性，数据达标后再放量扩量。"},
+              {k:"02 三件事验证标准",v:"人设是否成立 · 内容是否稳定 · 账号是否值得关注。"},
+              {k:"03 IP 定位",v:"一句话定位 + 核心标签 + 表达气质，统一账号口径。"}],
+      images:[]},
+    "16":{title:"产品科普系列短视频脚本",
+      desc:"独立完成情景剧口播短视频脚本撰写，面向 B 端客户与 C 端大众，把光转换玻璃、光养房等硬核技术通俗化表达，降低受众理解门槛。",
+      points:[],
+      images:[P+"slide16_img19.jpg",P+"slide16_img20.jpg",P+"slide16_img21.jpg"]},
+    "17":{title:"农业示范园 / 农业养殖项目方案",
+      desc:"现代农业科技示范园策划方案，面向合作方，打造集农科研发、有机种植、文旅体验一体化的现代农业园区，依托湾区区位优势，构建一二三产融合模式。",
+      points:[],
+      images:[P+"slide17_img22.jpg",P+"slide17_img23.jpg",P+"slide17_img24.jpg",P+"slide17_img25.jpg"]},
+    "19":{title:"朝安金茂悦人才房竞标方案",
+      desc:"参与方案撰写，负责市场研判与本体分析部分，进行 PPT 排版、优化内容表达与视觉呈现。",
+      points:[{k:"COVER",v:"方案封面"},{k:"CONTENTS",v:"目录"},{k:"RESEARCH",v:"市场研判"},{k:"COMPARE",v:"竞品对比"}],
+      images:[P+"slide19_img30.jpg",P+"slide19_img31.jpg",P+"slide19_img32.jpg",P+"slide19_img33.jpg"]},
+    "20":{title:"大沥大金地百货城改造可行性报告",
+      desc:"参与方案撰写，负责项目发展条件分析、市场分析，完善内容排版，优化内容表达与视觉呈现。",
+      points:[{k:"P1",v:"封面"},{k:"P2",v:"项目需求"},{k:"P3",v:"区位规划"},{k:"P4",v:"成本测算"}],
+      images:[P+"slide20_img34.jpg",P+"slide20_img35.jpg",P+"slide20_img36.jpg",P+"slide20_img37.jpg"]},
+    "22":{title:"佛山新城区域市场研究",
+      desc:"独立撰写输出专项市场研究报告。涵盖区位配套、经济运行、发展规划、楼市态势、客群需求等核心维度，为片区市场分析与决策提供支撑。",
+      points:[{k:"P1",v:"目录"},{k:"P2",v:"楼市概况"},{k:"P3",v:"在售楼盘"},{k:"P4",v:"研究结论"}],
+      images:[P+"slide22_img42.jpg",P+"slide22_img43.jpg",P+"slide22_img44.jpg",P+"slide22_img45.jpg"]},
+    "23":{title:"优衣库 Mickey Stands 整合营销策划案",
+      desc:"大广赛参赛作品。参与方案撰写，分工负责文案内容完善与 PPT 排版，优化内容表达与视觉呈现。",
+      points:[{k:"P1",v:"封面"},{k:"P2",v:"内容提要"},{k:"P3",v:"消费者分析"},{k:"P4",v:"活动落地"}],
+      images:[P+"slide23_img46.jpg",P+"slide23_img47.jpg",P+"slide23_img48.jpg",P+"slide23_img49.jpg"]},
+    "24":{title:"自然堂二十周年营销策划案",
+      desc:"以「美，不被定义」为主题，围绕自然堂二十周年策划线上线下一体化整合营销方案。参与方案撰写，分工负责文案内容完善与 PPT 排版，优化内容表达与视觉呈现。",
+      points:[{k:"P1",v:"主题封面"},{k:"P2",v:"组织战略"},{k:"P3",v:"项目需求"},{k:"P4",v:"项目策略"},{k:"奖项",v:"中国大学生公共关系策划创业大赛 三等奖"}],
+      images:[P+"slide24_img50.jpg",P+"slide24_img51.jpg",P+"slide24_img52.jpg",P+"slide24_img53.jpg"]}
+  };
+  var overlay=document.createElement('div');
+  overlay.className='wd-overlay';
+  document.body.appendChild(overlay);
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function open(slide){
+    var d=DATA[slide]; if(!d) return;
+    var pts=(d.points||[]).map(function(p){return '<li><b>'+esc(p.k)+'</b>'+esc(p.v)+'</li>';}).join('');
+    var imgs=(d.images||[]).map(function(src){return '<img src="'+src+'" alt="">';}).join('');
+    overlay.innerHTML='<div class="wd-modal" role="dialog" aria-modal="true" aria-label="'+esc(d.title)+'">'+
+      '<div class="wd-head"><h3>'+esc(d.title)+'</h3><button class="wd-close" aria-label="关闭">×</button></div>'+
+      '<div class="wd-body"><p class="wd-desc">'+esc(d.desc)+'</p>'+
+      (pts?'<ul class="wd-points">'+pts+'</ul>':'')+
+      (imgs?'<div class="wd-imgs">'+imgs+'</div>':'')+'</div></div>';
+    overlay.classList.add('open');
+    document.body.style.overflow='hidden';
+    var b=overlay.querySelector('.wd-close'); if(b) b.addEventListener('click',close);
+  }
+  function close(){overlay.classList.remove('open');overlay.innerHTML='';document.body.style.overflow='';}
+  overlay.addEventListener('click',function(e){if(e.target===overlay) close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape') close();});
+  document.querySelectorAll('.subcard[data-slide]').forEach(function(el){
+    el.setAttribute('role','button'); el.setAttribute('tabindex','0');
+    el.addEventListener('click',function(){open(el.getAttribute('data-slide'));});
+    el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(el.getAttribute('data-slide'));}});
+  });
+})();
+</script>
 </body>
 </html>
