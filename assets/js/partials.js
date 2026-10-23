@@ -7,6 +7,7 @@
       <button class="burger" id="burger" aria-label="菜单"><span></span><span></span><span></span></button>
       <nav class="menu" id="menu">
         <a href="about.html">关于我</a>
+        <a href="experience.html">工作经历</a>
         <a href="cases.html">项目案例</a>
         <a href="works.html">作品精选</a>
         <a href="index.html#contact">联系</a>
