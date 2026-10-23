@@ -6,11 +6,11 @@
       <a class="brand" href="index.html">蔡启玲<small>KELLIN · PORTFOLIO</small></a>
       <button class="burger" id="burger" aria-label="菜单"><span></span><span></span><span></span></button>
       <nav class="menu" id="menu">
-        <a href="about.html">关于我</a>
+        <a href="about.html">自我介绍</a>
         <a href="experience.html">工作经历</a>
         <a href="cases.html">项目案例</a>
         <a href="works.html">作品精选</a>
-        <a href="index.html#contact">联系</a>
+        <a href="index.html#contact">联系方式</a>
       </nav>
     </div>
   </header>`;
@@ -42,11 +42,12 @@
     burger.addEventListener('click', function(){ menu.classList.toggle('open'); });
     menu.addEventListener('click', function(e){ if(e.target.tagName==='A') menu.classList.remove('open'); });
   }
-  // active link
+  // active link (hash links only count when that anchor is actually reached)
   var here = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.menu a').forEach(function(a){
-    var h = a.getAttribute('href').split('#')[0];
-    if(h === here) a.classList.add('active');
+    var parts = a.getAttribute('href').split('#');
+    var h = parts[0], hash = parts[1];
+    if(h === here && (!hash || location.hash === '#' + hash)) a.classList.add('active');
   });
 })();
 
