@@ -147,6 +147,11 @@ td:nth-child(n+3){text-align:right;font-variant-numeric:tabular-nums}
 .gallery.two{grid-template-columns:repeat(2,1fr)}
 .gallery.three{grid-template-columns:repeat(3,1fr)}
 .gallery.single{grid-template-columns:1fr;max-width:920px;margin-left:auto;margin-right:auto}
+/* 两张竖图等高：同一画框比例 + contain，不裁切、不拉伸 */
+.gallery.equal-h img{aspect-ratio:462/682;object-fit:contain;height:auto;background:var(--paper)}
+/* 宽幅封面/横幅图：整行满宽，一行一张，保证可读；同框比等高 */
+.gallery.wide{grid-template-columns:1fr}
+.gallery.wide img{aspect-ratio:1533/679;object-fit:cover}
 .gallery figure{margin:0;background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:.3s;display:flex;flex-direction:column}
 .gallery figure:hover{transform:translateY(-3px);box-shadow:0 14px 30px -20px rgba(26,23,20,.4)}
 .gallery img{width:100%;height:auto;display:block;cursor:zoom-in}
@@ -155,6 +160,29 @@ td:nth-child(n+3){text-align:right;font-variant-numeric:tabular-nums}
 .gallery-block .gb-title{font-family:var(--serif);font-size:20px;font-weight:700;margin-bottom:4px}
 .gallery-block .gb-meta{font-size:15px;font-weight:700;color:var(--ink);margin:2px 0 14px;letter-spacing:.02em}
 .gallery-block .gb-note{font-size:13px;color:var(--muted);margin-bottom:14px}
+
+/* ===== 公众号推文：手机模型内可上下滑动 ===== */
+.phone-group{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin:26px 0 6px;align-items:start}
+.phone-item{margin:0;display:flex;flex-direction:column;align-items:center}
+.phone{position:relative;width:100%;max-width:340px;aspect-ratio:720/1420;
+  filter:drop-shadow(0 22px 32px rgba(26,23,20,.16))}
+.phone-screen{position:absolute;left:5.417%;top:7.535%;width:89.167%;height:90.07%;
+  background:#fff;overflow-y:auto;overflow-x:hidden;
+  -webkit-overflow-scrolling:touch;overscroll-behavior:contain;
+  border-radius:0 0 14.02% 14.02% / 0 0 7.04% 7.04%;
+  scrollbar-width:none;-ms-overflow-style:none}
+.phone-screen::-webkit-scrollbar{display:none}
+.phone-screen img{display:block;width:100%;height:auto}
+.phone-frame{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;user-select:none}
+.phone-bar{position:absolute;left:34.5%;bottom:3.5%;width:31%;height:4px;border-radius:99px;background:rgba(24,20,18,.8);pointer-events:none}
+.phone-item figcaption{margin-top:16px;font-size:13px;color:var(--ink-soft);letter-spacing:.04em;text-align:center;line-height:1.7}
+.phone-item figcaption a{color:var(--accent);border-bottom:1px solid rgba(26,23,20,.18)}
+.phone-item figcaption a:hover{border-bottom-color:var(--accent)}
+@media (max-width:1080px){.phone-group{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:760px){
+  .phone-group{grid-template-columns:1fr;gap:34px}
+  .phone-item .phone{max-width:300px}
+}
 
 /* sub-project list — text-cover cards (no image thumbnail) */
 .sublist{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin:30px 0;align-items:stretch;counter-reset:card}

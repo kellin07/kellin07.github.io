@@ -73,4 +73,13 @@
     im.style.cursor = 'zoom-in';
     im.addEventListener('click', function(e){ e.preventDefault(); open(im.getAttribute('src')); });
   });
+
+  // 任何带 data-lb 的元素（链接/按钮）点击打开对应大图，如公众号长图
+  document.querySelectorAll('[data-lb]').forEach(function(el){
+    el.style.cursor = 'zoom-in';
+    el.addEventListener('click', function(e){
+      e.preventDefault();
+      open(el.getAttribute('data-lb') || el.getAttribute('href'));
+    });
+  });
 })();
